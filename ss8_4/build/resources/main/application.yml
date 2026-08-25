@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: crm-chat-advisor-api
+  ai:
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: ${OLLAMA_CHAT_MODEL:llama3.2}
+      embedding:
+        options:
+          model: ${OLLAMA_EMBEDDING_MODEL:nomic-embed-text}
+    vectorstore:
+      pgvector:
+        dimensions: 768
+        initialize-schema: false
+app:
+  cors:
+    allowed-origin: ${CRM_ALLOWED_ORIGIN:http://localhost:3000}
+server:
+  port: 8080

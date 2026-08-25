@@ -1,0 +1,37 @@
+spring:
+    profiles:
+        active: dev
+    application:
+        name: btth
+    ai:
+        openai:
+            base-url: https://openrouter.ai/api/v1
+            api-key: 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
+            chat:
+                model: anthropic/claude-3-haiku
+            embedding:
+                model: text-embedding-3-small
+        vectorstore:
+            pgvector:
+                index-type: HNSW
+                distance-type: COSINE_DISTANCE
+                dimensions: 1536
+                initialize-schema: true
+    datasource:
+        url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres?sslmode=require
+        username: postgres.whwpruiazxomaykzummz
+        password: EBLMJ0555-57Ab
+    #  sql:
+    #    init:
+    #      mode: always
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                show_sql: true
+                format_sql: true
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+    port: 8081

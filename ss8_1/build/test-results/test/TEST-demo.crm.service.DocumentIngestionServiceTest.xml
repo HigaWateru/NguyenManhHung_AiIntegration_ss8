@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="demo.crm.service.DocumentIngestionServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-08-25T10:05:12.165Z" hostname="DESKTOP-7NM2FQJ" time="1.296">
+  <properties/>
+  <testcase name="rejectsMissingResource()" classname="demo.crm.service.DocumentIngestionServiceTest" time="0.958"/>
+  <testcase name="ingestsMarkdownWithDynamicMetadata()" classname="demo.crm.service.DocumentIngestionServiceTest" time="0.309"/>
+  <system-out><![CDATA[17:05:13.129 [Test worker] ERROR demo.crm.service.DocumentIngestionService -- CRM document is missing or unreadable: missing.md
+17:05:13.460 [Test worker] INFO demo.crm.service.DocumentIngestionService -- CRM document ingested successfully: sourceFile=test-document.md, category=returns, chunks=1
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\admin\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.10\9426d28828bdcdf42666bb7a68c468279ea78f59\byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

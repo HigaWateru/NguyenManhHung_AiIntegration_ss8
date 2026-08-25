@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: crm-document-ingestion
+  datasource:
+    url: ${SUPABASE_JDBC_URL:jdbc:postgresql://your-project.pooler.supabase.com:6543/postgres?sslmode=require}
+    username: ${SUPABASE_DB_USERNAME:postgres.your_project_id}
+    password: ${SUPABASE_DB_PASSWORD:change-me}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 4
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 20000
+  ai:
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      embedding:
+        options:
+          model: nomic-embed-text
+    vectorstore:
+      pgvector:
+        table-name: vector_store
+        dimensions: 768
+        initialize-schema: true
+server:
+  port: 8080

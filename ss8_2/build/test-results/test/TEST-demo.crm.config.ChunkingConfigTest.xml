@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="demo.crm.config.ChunkingConfigTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-08-25T10:05:18.084Z" hostname="DESKTOP-7NM2FQJ" time="0.724">
+  <properties/>
+  <testcase name="registersBothSplittersInSpringContext()" classname="demo.crm.config.ChunkingConfigTest" time="0.569"/>
+  <testcase name="headerSplitterKeepsMarkdownHeadersWithTheirContent()" classname="demo.crm.config.ChunkingConfigTest" time="0.135"/>
+  <system-out><![CDATA[17:05:18.802 [Test worker] INFO org.springframework.ai.transformer.splitter.TextSplitter -- Splitting up document into 2 chunks.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
